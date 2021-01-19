@@ -2,15 +2,23 @@
 <html lang="en">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta http-equiv="refresh" content="1500">
+<!--<meta http-equiv="refresh" content="1500">-->
   <title>Speaker Saver</title>
 </head>
+<script>
 
+var x;
+
+window.onload = function() {
+	x = document.getElementById("myAudio");
+	setInterval(function(){x.play();},1500000); // 25 mins = 1,500,000 miliseconds
+}
+
+</script>
 <body>
-  <audio autoplay preload="auto" controls loop>
+  <audio id="myAudio" autoplay preload="auto" controls>
     <source src="10hz_tone.wav" type="audio/wav">
     Your browser does not support the audio element.
   </audio>
-
 </body>
 </html>
